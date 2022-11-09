@@ -13,7 +13,7 @@ def predict(img):
     classes = ('plane','car','bird','cat','deer','dog','frog','horse','ship','truck')
 
     net = ResNet()
-    net.load_state_dict(torch.load(r'D:\pycharm\python_study\ResNet\resNet34.pth',map_location='cpu'))  # 加载网络训练的参数
+    net.load_state_dict(torch.load('./resNet34.pth',map_location='cpu'))  # 加载网络训练的参数
     im = Image.open(img)
     im = data_transform(im)  # 图像维度 （C，H，W）
     im = torch.unsqueeze(im,dim  = 0)  # 增加维度，第0维增加1 ，维度（1，C，H，W）
