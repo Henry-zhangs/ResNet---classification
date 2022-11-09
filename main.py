@@ -14,7 +14,7 @@ st.write("")
 file_up = st.file_uploader("Upload an image")
 
 if file_up is None:
-    image =r'D:\pycharm\python_study\ResNet\image\img.png'
+    image =r'.\image\img.png'
     img = Image.open(image)
     st.image(img, caption='Image.', use_column_width=True)
     st.write("")
